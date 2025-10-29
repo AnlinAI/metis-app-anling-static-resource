@@ -1,0 +1,18 @@
+# 全站默认策略：所有静态资源缓存1年，immutable
+/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# 可选：对字体与图片再追加 CORS 头，方便跨域引用
+/*.woff2
+/*.woff
+/*.ttf
+/*.eot
+  Access-Control-Allow-Origin: *
+/*.png
+/*.jpg
+/*.jpeg
+/*.webp
+/*.gif
+/*.svg
+/*.avif
+  Access-Control-Allow-Origin: *
