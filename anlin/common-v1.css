@@ -1,0 +1,515 @@
+.w-200 {
+    width: 200px !important;
+    min-width: 200px !important;
+}
+
+.w-150 {
+    width: 150px !important;
+    min-width: 150px !important;
+}
+
+.w-100 {
+    width: 100px !important;
+    min-width: 100px !important;
+}
+
+.w-80 {
+    width: 80px !important;
+    min-width: 80px !important;
+}
+
+.w-50 {
+    width: 50px !important;
+    min-width: 50px !important;
+}
+
+label.error {
+    /* background:url("./demo/images/unchecked.gif") no-repeat 0px 0px; */
+  
+    padding-left: 16px;
+  
+    padding-bottom: 2px;
+  
+    font-weight: bold;
+  
+    color: #EA5200;
+  }
+  
+  .validate-input {
+      position: relative;
+    }
+    
+    .validate-input.error::before {
+      --color: #c80000;
+  
+      border-color: oklch(from var(--color) l c h / 0.25);
+      background: oklch(from var(--color) calc(l * 0.75) c h / 0.5);
+      color: oklch(from var(--color) calc(l * 2.5) c h);
+  
+      content: attr(data-validate) ;
+      position: absolute;
+      max-width: 70%;
+      border-radius: 13px;
+      padding: 4px 25px 4px 10px;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      -moz-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      -o-transform: translateY(-50%);
+      transform: translateY(-50%);
+      right: 8px;
+      pointer-events: none;
+    
+      font-family: Poppins-Medium;
+      font-size: 13px;
+      line-height: 1.4;
+      text-align: left;
+    
+      visibility: visible;
+      opacity: 1;
+    
+      -webkit-transition: opacity 0.4s;
+      -o-transition: opacity 0.4s;
+      -moz-transition: opacity 0.4s;
+      transition: opacity 0.4s;
+    }
+    
+    .validate-input.error::after {
+      content: "\f06a";
+      font-family: FontAwesome;
+      display: block;
+      position: absolute;
+      color: #c80000;
+      font-size: 15px;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      -moz-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      -o-transform: translateY(-50%);
+      transform: translateY(-50%);
+      right: 13px;
+    }
+    
+    .validate-input.error:hover:before {
+      visibility: visible;
+      opacity: 1;
+    }
+    
+    @media (max-width: 992px) {
+      .alert-validate::before {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+  
+    /* ladda 扩展*/
+    .ladda-button {
+      background: var(--main-color);
+      border: 0;
+      padding: 14px 18px;
+      font-size: 16px;
+      cursor: pointer;
+      color: #fff;
+      border-radius: 2px;
+      border: 1px solid transparent;
+      width: 150px;
+      -webkit-appearance: none;
+      -webkit-font-smoothing: antialiased;
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  }
+  
+  .ladda-button:hover {
+      background-color: var(--main-color);
+      box-shadow: 0 0 15px var(--main-color);
+      backdrop-filter: blur(2px);
+      border: 1px solid var(--main-color);
+  }
+  
+  @keyframes glow-shine-ani-button {
+      from {
+          box-shadow: 0 0 5px var(--main-color);
+      }
+      to {
+          box-shadow: 0 0 10px var(--main-color), 0 0 30px var(--main-color);
+      }
+  }    
+
+  .ladda-button.primary {
+    /* 这里是 buttonColor 混合宏展开后的样式，假设为绿色主题 */
+    background-color: var(--bs-primary);
+    }
+
+    .ladda-button.warning {
+        background-color: var(--bs-warning);
+        }
+  
+  .ladda-button.green {
+      /* 这里是 buttonColor 混合宏展开后的样式，假设为绿色主题 */
+      background-color: #2aca76;
+  }
+  
+  .ladda-button.blue {
+      /* 这里是 buttonColor 混合宏展开后的样式，假设为蓝色主题 */
+      background-color: #53b5e6;
+  }
+  
+  .ladda-button.red {
+      /* 这里是 buttonColor 混合宏展开后的样式，假设为红色主题 */
+      background-color: #ff0000;
+  }
+  
+  .ladda-button.purple {
+      /* 这里是 buttonColor 混合宏展开后的样式，假设为紫色主题 */
+      background-color: #9973c2;
+  }
+  
+  .ladda-button.mint {
+      /* 这里是 buttonColor 混合宏展开后的样式，假设为薄荷绿主题 */
+      background-color: #16a085;
+  }
+  
+  .ladda-button[disabled],
+  .ladda-button[data-loading] {
+      border-color: rgba(0, 0, 0, 0.07);
+      background-color: var(--main-color-05);
+      box-shadow: 0 0 5px var(--main-color-05);
+      backdrop-filter: blur(2px);
+      border: 1px solid var(--main-color-05);
+      animation: glow-shine-ani-button 1s infinite alternate;
+  }
+  
+  .ladda-button[disabled],
+  .ladda-button[disabled]:hover,
+  .ladda-button[data-loading],
+  .ladda-button[data-loading]:hover {
+      cursor: default;
+      background-color: var(--main-color-07);
+  }
+  
+  .ladda-button[data-size=xs] {
+      padding: 4px 8px;
+  }
+  
+  .ladda-button[data-size=xs] .ladda-label {
+      font-size: 0.7em;
+  }
+  
+  .ladda-button[data-size=s] {
+      padding: 6px 10px;
+  }
+  
+  .ladda-button[data-size=s] .ladda-label {
+      font-size: 0.9em;
+  }
+  
+  .ladda-button[data-size=l] .ladda-label {
+      font-size: 1.2em;
+  }
+  
+  .ladda-button[data-size=xl] .ladda-label {
+      font-size: 1.5em;
+  }
+
+  
+  /* Toast */
+#toast-container {
+    z-index: var(--z-index-top) !important;
+}
+
+.toast-container {
+    position: fixed;
+    top: 80px;
+    right: 20px;
+    z-index: 10000;
+    min-width: 320px;
+    max-width: 420px;
+}
+  
+.toast-backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 80% 20%, rgba(61, 128, 255, 0.1) 0%, transparent 50%);
+    border-radius: 16px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .toast-container:hover .toast-backdrop {
+    opacity: 1;
+  }
+  
+
+
+
+  .metis-toast{
+    pointer-events: auto;
+    position: relative; 
+}
+
+  
+
+.metis-toast .notify {
+
+    margin: 0 auto;
+    margin-top: 20px;
+    width: 400px;
+    max-width: 400px;
+    min-height: 50px;
+
+    padding: 0.5rem 0.75rem;
+	border-width: 1px;
+	border-style: solid;
+	border-radius: 6px;
+	display: flex;
+	gap: 0.5rem;
+	align-items: center;
+	font-weight: 500;
+	line-height: 1.5;
+	white-space: nowrap;
+	transition: all 0.2s;
+    overflow: hidden; 
+
+    cursor: pointer;/* 默认隐藏 */
+
+}
+
+.metis-toast .toast-close {
+    width: 12px;
+    height: 12px;
+    border: none;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    color: rgba(255, 255, 255, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-left: 0px;
+    flex-shrink: 0;
+    top: 5px;
+    right: 5px;
+    position: absolute;
+}
+
+.metis-toast .toast-close:hover {
+    background: rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 1);
+    transform: scale(1.1);
+}
+
+
+/* 按钮样式 */
+.metis-toast .icon {
+    /* background-color: var(--button, #333);  */
+    height: 24px;
+    width: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    /* filter: drop-shadow(3px 3px 3px rgba(0,0,0,0.2)); */
+    font-weight: 900;
+    font-size: 24px;
+    opacity: 0; /* 默认隐藏 */
+}
+
+/* 标题和副标题样式 */
+.metis-toast .title, .metis-toast .subtitle {
+    font-size: 14px;
+
+    display: block;
+    flex: 1 0 auto;
+    /* white-space: nowrap; */
+    word-wrap: break-word;
+    display: block;
+    width: 100%;
+    max-width: 350px;
+    white-space: normal;
+    opacity: 0;
+}
+
+/* 显示动画 */
+.metis-toast .notify.animate {
+    opacity: 1;
+    animation: backInDown 1s ease forwards;
+}
+
+.metis-toast .notify.animate.toast-hidden {
+    opacity: 1;
+    animation: zoomOutDown 1s ease forwards;
+}
+
+.metis-toast .notify.animate .icon {
+    opacity: 1;
+    animation: heartBeat 4s ease forwards;
+}
+
+.metis-toast .notify.animate .title,
+.metis-toast .notify.animate .subtitle {
+    opacity: 1;
+    animation: rubberBand 1s ease forwards;
+}
+
+
+/*图片常用样式*/
+
+.mx-128 {
+    width: 100%;
+    height: 100%;
+    max-width: 128px !important;
+    max-height: 128px !important;
+}
+
+img.mx-auto-contain {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+
+}
+
+img.mx-auto-cover {
+    width: 100%;
+    min-width: 100%;
+    height: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+img.mx-256-contain {
+    width: 100%;
+    height: 100%;
+    max-width: 256px !important;
+    max-height: 256px !important;
+    object-fit: contain;
+    object-position: center;
+
+}
+
+img.mx-256-cover {
+    width: 100%;
+    height: 100%;
+    max-width: 256px !important;
+    max-height: 256px !important;
+    object-fit: cover;
+    object-position: center;
+
+}
+
+
+img.mx-128-contain {
+    width: 100%;
+    height: 100%;
+    max-width: 128px !important;
+    max-height: 128px !important;
+    object-fit: contain;
+    object-position: center;
+
+}
+
+img.mx-128-cover {
+    width: 100%;
+    height: 100%;
+    max-width: 128px !important;
+    max-height: 128px !important;
+    object-fit: cover;
+    object-position: center;
+
+}
+
+img.mx-90-contain {
+    width: 100%;
+    height: 100%;
+    max-width: 90px !important;
+    max-height: 90px !important;
+    object-fit: contain;
+    object-position: center;
+
+}
+
+img.mx-90-cover {
+    width: 100%;
+    height: 100%;
+    max-width: 90px !important;
+    max-height: 90px !important;
+    object-fit: cover !important;
+    object-position: center;
+
+}
+
+.info-text {
+    font-size: 16px;
+    line-height: 32px;
+    /* color: #727489; */
+}
+
+.info-text.mp {
+    margin-bottom: 20px;
+}
+
+.info-text-small {
+    font-size: 14px;
+    line-height: 24px;
+    /* color: #727489; */
+}
+
+.info-text-small.mp {
+    margin-bottom: 10px;
+}
+
+.info-text-very-small {
+    font-size: 12px;
+    line-height: 24px;
+    /* color: #727489; */
+}
+
+.info-text-very-small.mp {
+    margin-bottom: 5px;
+}
+
+.modal-header {
+    height: 50px;
+    display: flex;
+    align-items: flex-end;     /* 底部对齐 */
+}
+
+.modal-title {
+    margin: 0 auto 0 0;
+    padding-left: 10px;
+}
+
+/* 虚线边框皮肤 */
+.ladda-skin.dashed{
+    /* border-radius: 6px; */
+    background: rgb(7, 7, 15);
+    color: #fff;
+    padding: 2px 2px;
+    /* font-size: 16px; */
+    transition: .2s;
+  }
+  /* 鼠标悬停高亮 */
+  .ladda-skin.dashed:hover{
+    border: 1px dashed  var(--main-color);
+    /* background: var(--main-color); */
+    color: var(--main-color);
+  }
+  
+  /* 实线边框皮肤 */
+  .ladda-skin.solid{
+    border: 2px solid  var(--main-color);
+    background: rgb(7, 7, 15);;
+    color: #fff;
+    padding: 2px 2px;
+    /* font-size: 16px; */
+    transition: .2s;
+  }
+  /* 鼠标悬停高亮 */
+  .ladda-skin.solid:hover{
+    background: var(--main-color);
+    color: #fff;
+  }
